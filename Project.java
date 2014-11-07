@@ -42,7 +42,7 @@ public class Project {
   public void setMarkupStatus (boolean status) {
     markupStatus = status;
   }
-
+  
   public void setBasePrice (String value){
     basePrice = value;
   }

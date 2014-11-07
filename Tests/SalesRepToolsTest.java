@@ -7,12 +7,7 @@ import junit.framework.TestCase;
  */
 public class SalesRepToolsTest extends TestCase {
   
-  /**
-   * A test method.
-   * (Replace "X" with a name describing the test.  You may write as
-   * many "testSomething" methods in this class as you wish, and each
-   * one will be called when running JUnit over this class.)
-   */
+  
   public void testInput1() {
     //Testing the given Input1 Conditions
     String expected = "$1591.58";
@@ -42,20 +37,26 @@ public class SalesRepToolsTest extends TestCase {
   }
    
   public void testInputZeroWorkers() {
-    //Testing the given Zero Worker Conditions
-    String expected = "$0.00";
-    String actual = SalesRepTools.getEstimate("$0.00","0 people", "electronics");
+    //Testing the Input1 conditions with Zero Workers
+    String expected = "$1542.44";
+    String actual = SalesRepTools.getEstimate("$1299.99","0 people", "food");
     assertEquals (expected, actual);
   }
    
   public void testInputWithPharmaceuticals() {
-    //Testing the given Zero Dollar Conditions
-    String expected = "$0.00";
-    String actual = SalesRepTools.getEstimate("$5432.00","0 people", "electronics");
+    //Testing the given Input2 Conditions with the category pharmaceutical instead of drugs
+    String expected = "$6199.81";
+    String actual = SalesRepTools.getEstimate("$5432.00","1 person", "pharmaceutical");
     assertEquals (expected, actual);
   }
-   
-   
-    
   
+  public void testInputWithLargeDollarAmount () {
+   //Testing the input with a dollar figure
+    String expected = "$113400.00";
+    String actual = SalesRepTools.getEstimate("$100000.00","5 people", "electronics");
+    assertEquals (expected, actual);
+  }
+  
+
+    
 }
