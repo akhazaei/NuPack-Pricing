@@ -1,5 +1,8 @@
 import java.math.*;
 
+/* Author: Arash Khazaei
+ * Description: The Pricing class contains member data and member function that pertain to financial analysis
+ */ 
 public class Pricing {
   public static final String AUTOMATIC_MARKUP = "0.05";
   public static final String WORKER_MARKUP = "0.012";
@@ -10,10 +13,19 @@ public class Pricing {
   public static final int SUCCESS_MARKUP = 0;
   public static final int FAIL_MARKUP = -1;
 
+  /* Returns the dollar amount with dollar format modification
+   * @param amount - the dollar amount without a '$' sign
+   * @retun - the amount with a '$'
+   */
   public static String getDollarFormat (String amount) {
     return "$" + amount;
   }
 
+  /* Returns calculated base price given an initial amount
+   * Base price is determined by the input amount with the 5% automatic markup
+   * @param inputAmount - the dollar amount prior to the initial markup
+   * @retun - the calculated base price
+   */
   public static String getBasePrice (String inputAmount){
     
     BigDecimal inputPrice = new BigDecimal(inputAmount);
@@ -25,9 +37,15 @@ public class Pricing {
     return inputPrice.toString();
   }
 
-  //Class member function to calculate price adjustments
+  /* Calculates all the necissary markups of a given Project
+   * It calculates the Worker Markups and Category Markups if applicable
+   * @param givenProject - the input project that needs to have markups applied to! 
+   * @return - either FAIL_MARKUP meaning no markups were applied or SUCCESS_MARKUP meaning markups applied
+   */
   public static int priceMarkupCalculator (Project givenProject) {
     if (givenProject == null)
+      return FAIL_MARKUP;
+    if (givenProject.areMarkupsApplied() == true)
       return FAIL_MARKUP;
     
     BigDecimal basePrice = new BigDecimal(givenProject.getBasePrice ());

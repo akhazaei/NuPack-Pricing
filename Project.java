@@ -19,6 +19,7 @@ public class Project {
     markupPrice = "0.00";
   }
 
+  
   public String getBasePrice (){
     return basePrice;
   }

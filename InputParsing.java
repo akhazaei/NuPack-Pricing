@@ -1,3 +1,6 @@
+/* Author: Arash Khazaei
+ * Description: The InputParsing class has member data and member functions that can be used to parse user input
+ */ 
 public class InputParsing {
  public static final int DOLLAR_AMOUNT = 0;
  public static final int WORKER_AMOUNT = 1;
