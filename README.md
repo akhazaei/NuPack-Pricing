@@ -14,19 +14,19 @@ and NuPack needs to quickly give them an estimate of how much it will cost. Diff
 
 to the job:
 
-●-Without Exception, there is a flat markup on all jobs of 5%
+● Without Exception, there is a flat markup on all jobs of 5%
 
-●●-For each person that needs to work on the job, there is a markup of 1.2%
+● For each person that needs to work on the job, there is a markup of 1.2%
 
-●●-Markups are also added depending on the types of materials involved:
+● Markups are also added depending on the types of materials involved:
 
-○●-If pharmaceuticals are involved, there is an immediate 7.5% markup
+○ If pharmaceuticals are involved, there is an immediate 7.5% markup
 
-○●-For food, there is a 13% markup
+○ For food, there is a 13% markup
 
-○●-Electronics require a 2% markup
+○ Electronics require a 2% markup
 
-○●-everything else, there is no markup
+○ everything else, there is no markup
 
 Another system calculates the base price depending on how many products need to be
 
