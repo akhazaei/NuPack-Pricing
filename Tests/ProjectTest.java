@@ -8,11 +8,25 @@ import junit.framework.TestCase;
 public class ProjectTest extends TestCase {
   
   
-  public void testSettingBasePrice() {
+  public void testSettingBase() {
+    //Simple test to see if the final price can be modified
+    Project testProject = new Project ("100.00", "5", Project.FOOD);
+    
+    String actual = "100.00";
+    testProject.setBasePrice(actual);
+    String expected = testProject.getBasePrice();
+    assertEquals (expected, actual);
     
   }
   
   public void testSettingFinalPrice() {
+    //Simple test to see if the final price can be modified
+    Project testProject = new Project ("100.00", "5", Project.FOOD);
+
+    String actual = "150.00";
+    testProject.setMarkupCost(actual);
+    String expected = testProject.getMarkupPrice();
+    assertEquals (expected, actual);
     
   }
   

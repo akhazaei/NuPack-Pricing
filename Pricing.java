@@ -45,8 +45,6 @@ public class Pricing {
   public static int priceMarkupCalculator (Project givenProject) {
     if (givenProject == null)
       return FAIL_MARKUP;
-    if (givenProject.areMarkupsApplied() == true)
-      return FAIL_MARKUP;
     
     BigDecimal basePrice = new BigDecimal(givenProject.getBasePrice ());
     BigDecimal finalCost = new BigDecimal(ZERO);
